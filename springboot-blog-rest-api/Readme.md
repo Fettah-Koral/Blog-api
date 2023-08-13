@@ -8,6 +8,8 @@
 <h1></h1>
 <img src="src/main/resources/static/images/controllers2.png" alt="controllers2"/>
 
+<h1></h1>
+<img src="src/main/resources/static/images/schemas.png" alt="schemas"/>
 
 <h3>Contact Me</h3>
 
