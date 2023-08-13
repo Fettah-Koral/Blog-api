@@ -1,5 +1,7 @@
 package com.springboot.blog.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -69,6 +71,12 @@ public class PostController {
 	public ResponseEntity<String> deletePost(@PathVariable(name="id") long id) {		
 		postService.deletePostById(id);
 		return new ResponseEntity<>("Post entry deleted successfully", HttpStatus.OK);
+	}
+	
+	@GetMapping("/category/{id}")
+	public ResponseEntity<List<PostDto>> getPostsByCategory(@PathVariable("id") Long categoryId){
+		List<PostDto> postDtos =  postService.getPostsByCategory(categoryId);
+		return ResponseEntity.ok(postDtos);
 	}
 	
 }

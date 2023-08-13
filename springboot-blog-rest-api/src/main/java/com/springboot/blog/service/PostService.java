@@ -1,5 +1,7 @@
 package com.springboot.blog.service;
 
+import java.util.List;
+
 import com.springboot.blog.dtos.PostDto;
 import com.springboot.blog.dtos.PostResponse;
 
@@ -14,4 +16,6 @@ public interface PostService {
 	PostDto updatePost(PostDto postDto, long id);
 
 	void deletePostById(long id);
+	
+	List<PostDto> getPostsByCategory(Long categoryId);
 }
